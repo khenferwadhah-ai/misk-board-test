@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لوحة مواقيت الصلاة</title>
+<style>
+body{
+  background:#0f2027;
+  color:white;
+  font-family:Tahoma;
+  text-align:center;
+}
+.box{
+  margin:40px auto;
+  width:320px;
+  padding:20px;
+  background:#203a43;
+  border-radius:15px;
+}
+.clock{
+  font-size:36px;
+  margin:20px 0;
+  border:2px solid white;
+  border-radius:10px;
+  padding:10px;
+}
+table{
+  width:100%;
+  font-size:20px;
+}
+td{
+  padding:6px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>جمعية مسك الختام الخيرية</h2>
+  <div class="clock" id="clock">--:--:--</div>
+
+  <table>
+    <tr><td>الفجر</td><td>05:30</td></tr>
+    <tr><td>الظهر</td><td>12:45</td></tr>
+    <tr><td>العصر</td><td>16:15</td></tr>
+    <tr><td>المغرب</td><td>18:10</td></tr>
+    <tr><td>العشاء</td><td>19:30</td></tr>
+  </table>
+</div>
+
+<script>
+setInterval(()=>{
+  document.getElementById("clock").innerText =
+    new Date().toLocaleTimeString("ar-DZ");
+},1000);
+</script>
+
+</body>
+</html>
